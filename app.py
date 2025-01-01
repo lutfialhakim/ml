@@ -10,7 +10,7 @@ perceptron_model = joblib.load('fish/perceptron_fish.pkl')
 perceptron_scaler = joblib.load('fish/perceptron_scaler_fish.pkl')
 
 # Application title
-st.title("Iwak Prediction")
+st.header("Iwak Prediction")
 # Center the input form using custom CSS
 st.markdown(
     """
