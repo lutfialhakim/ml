@@ -11,7 +11,6 @@ perceptron_scaler = joblib.load('fish/perceptron_scaler_fish.pkl')
 
 # Application title
 st.title("Iwak Prediction")
-
 # Center the input form using custom CSS
 st.markdown(
     """
@@ -26,10 +25,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # Centered input container
 st.markdown('<div class="centered">', unsafe_allow_html=True)
-
 # Model selection
 model_type = st.selectbox("Choose model", ["SVM", "Perceptron"])
 
