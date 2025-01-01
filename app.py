@@ -12,7 +12,6 @@ perceptron_scaler = joblib.load('fish/perceptron_scaler_fish.pkl')
 # Application title
 st.title("Iwak Prediction")
 # Centered input container
-st.markdown('<div class="centered">', unsafe_allow_html=True)
 # Model selection
 model_type = st.selectbox("Choose model", ["SVM", "Perceptron"])
 # Input form
@@ -41,5 +40,3 @@ if st.button("Predict"):
     # Display prediction
     st.write("### Prediction Result")
     st.write(f"The predicted species is: **{prediction[0]}**")
-
-st.markdown('</div>', unsafe_allow_html=True)
