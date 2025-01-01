@@ -10,26 +10,11 @@ perceptron_model = joblib.load('fish/perceptron_fish.pkl')
 perceptron_scaler = joblib.load('fish/perceptron_scaler_fish.pkl')
 
 # Application title
-st.header("Iwak Prediction")
-# Center the input form using custom CSS
-st.markdown(
-    """
-    <style>
-    .centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.title("Iwak Prediction")
 # Centered input container
 st.markdown('<div class="centered">', unsafe_allow_html=True)
 # Model selection
 model_type = st.selectbox("Choose model", ["SVM", "Perceptron"])
-
 # Input form
 st.header("Input Features")
 length = st.number_input("Fish Length (cm)", min_value=0.0, max_value=100.0, value=10.0, key='length')
